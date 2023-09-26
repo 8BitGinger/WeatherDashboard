@@ -1,0 +1,50 @@
+
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main {
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    margin-top: 100px;
+    z-index: 1;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    top:0;
+    height: 100px;
+    z-index: 1;
+}
+
+input {
+    width: 100%;
+    margin: 10px;
+   block-size: 50px;
+   border-radius: 5px;
+   border: 2px solid rgb(193, 190, 190);
+}
+
+.search {
+    width: 100%;
+    margin: 10px;
+}
+
+.city {
+    width: 100%;
+    margin: 10px;
+  
+}
+
+.line {
+    background-color: rgb(207, 202, 202);
+    width: 100%;
+    height: 2px;
+margin: 10px;
+}
