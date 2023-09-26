@@ -4,47 +4,190 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 main {
     position: fixed;
     left: 0;
-    width: 300px;
+    width: 320px;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 90px;
     z-index: 1;
     display: flex;
+    background-color: aliceblue;
+    border: 1px solid rgb(14, 99, 184)
+}
+
+.side {
+    width: 300px;
 }
 
 header {
     position: fixed;
     top:0;
     height: 100px;
-    z-index: 1;
+    background-image: linear-gradient(to right,rgb(14, 99, 184), navy);
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    color: white;
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 input {
     width: 100%;
     margin: 10px;
+    margin-top: 0;
    block-size: 50px;
    border-radius: 5px;
    border: 2px solid rgb(193, 190, 190);
 }
 
-.search {
+
+
+section {
+    margin-top: 120px;
+    margin-left: 330px;
+    width: 70%;
+
+}
+
+.cityInfo {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.fiveDay {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.fiveDay h2 {
+    width: 100%;
+}
+
+#day-1{
+    background-color: rgb(39, 39, 80);
+    min-width: 250px;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+#day-2{
+    background-color: rgb(39, 39, 80);
+        min-width: 250px;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+
+}
+
+#day-3{
+    background-color: rgb(39, 39, 80);
+        min-width: 250px;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+
+}
+
+#day-4{
+    background-color: rgb(39, 39, 80);
+        min-width: 250px;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+
+}
+
+.day{
+    background-color: rgb(39, 39, 80);
+        min-width: 170px;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 5px;
+
+}
+
+::placeholder {
+    font-size: 20px;
+    color: rgb(217, 213, 213);
+    margin-top: 8px;
+}
+
+h4 {
+    color: aliceblue;
+    font-weight: 600;
+    font-size: larger;
+}
+
+h5 {
+    color: aliceblue;
+    font-weight: 400;
+    font-size: large;
+}
+
+.btn {
     width: 100%;
     margin: 10px;
+    height: 30px;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+.city:hover {
+    box-shadow: inset 0 0 2px 2px rgb(37, 136, 241);
+}
+
+.search:hover {
+    box-shadow: 0 0 2px 2px rgb(20, 12, 67);
+
 }
 
 .city {
-    width: 100%;
-    margin: 10px;
-  
+    background-color: rgb(207, 205, 205);
+    font-weight: 600;
+
 }
+
+.search {
+    background-color: rgb(91, 149, 244);
+    color: aliceblue;
+    font-weight: 400;
+}
+
+
 
 .line {
     background-color: rgb(207, 202, 202);
     width: 100%;
     height: 2px;
 margin: 10px;
+}
+
+.fa-sun {
+    font-size: xx-large;
+}
+
+.fa-cloud {
+    font-size: xx-large;
 }
