@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Added Font Awesome for Weather Icons later-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js">
+    <!--Added jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!--css link-->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -21,7 +23,7 @@
         <div class="side">
             <h2>Search for a City:</h2>
             <form>
-                <input id="searchBox" type="search" placeholder="San Diego">
+                <input id="searchBox" type="search" placeholder="San Diego" spellcheck="false">
                 <button id="searchBtn" class="btn search">Search</button>
             </form>
         <!--the div below is used to create the line effect-->
@@ -39,14 +41,10 @@
 
     <section>
         <div id="cityInfo" class="cityInfo">
-            <h2>Atlanta (9/13/2022) <i class="fa-solid fa-sun" style="color: #ffd500;"></i></h2>
-            <h2 class="cityName"></h2>
-            <h3>Temp: 76.62 f</h3>
-            <result class="cityTemp"></result>
-            <h3>Wind: 8.43 MPH</h3>
-            <result id="cityWind"></result>
-            <h3>Humidity: 44%</h3>
-            <result id="cityHum"></result>
+            <h2 class="cityName">Atlanta (9/13/2022) <i class="fa-solid fa-sun" style="color: #ffd500;"></i></h2>
+            <h3 id="cityTemp">Temp: 76.62 f</h3>
+            <h3 id="cityWind">Wind: 8.43 MPH</h3>
+            <h3 id="cityHum">Humidity: 44%</h3>
         </div>
 
         <div id="fiveDay" class="fiveDay">
@@ -91,7 +89,7 @@
 
     </section>
     
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
 
 </body>
 </html>
