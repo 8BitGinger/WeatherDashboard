@@ -10,8 +10,7 @@ body {
   background: #E3F2FD;
 }
 h1 {
-  background: #5372F0;
-  font-size: 1.75rem;
+    background-image: linear-gradient(to right,rgb(10, 74, 137), navy);  font-size: 1.75rem;
   text-align: center;
   padding: 18px 0;
   color: #fff;
@@ -38,11 +37,16 @@ h1 {
   padding: 0 16px;
   border: 2px solid #5372F0;
 }
+
+.city {
+    margin: 5px 0;
+    background-color: #BBBBBB;
+}
 .weather-input .separator {
   height: 1px;
   width: 100%;
   margin: 25px 0;
-  background: #BBBBBB;
+  background: #272131;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,8 +84,8 @@ h1 {
   width: 100%;
 }
 .weather-data .current-weather {
-  color: #fff;
-  background: #5372F0;
+  color: #000000;
+  border: 2px solid navy;
   border-radius: 5px;
   padding: 20px 70px 20px 20px;
   display: flex;
@@ -121,7 +125,7 @@ h1 {
   padding: 18px 16px;
   list-style: none;
   width: calc(100% / 5);
-  background: #6C757D;
+  background: #2c2743;
   border-radius: 5px;
 }
 .weather-cards .card h3 {
