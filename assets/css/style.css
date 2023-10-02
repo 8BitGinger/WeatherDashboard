@@ -125,7 +125,7 @@ h1 {
   padding: 18px 16px;
   list-style: none;
   width: calc(100% / 5);
-  background: #2c2743;
+  background: #242131;
   border-radius: 5px;
 }
 .weather-cards .card h3 {
@@ -136,6 +136,9 @@ h1 {
   max-width: 70px;
   margin: 5px 0 -12px 0;
 }
+
+
+
 @media (max-width: 1400px) {
   .weather-data .current-weather {
     padding: 20px;
