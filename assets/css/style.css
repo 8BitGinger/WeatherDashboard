@@ -86,6 +86,7 @@ h1 {
 .weather-data .current-weather {
   color: #000000;
   border: 2px solid navy;
+  background-image: linear-gradient(to right, white, rgb(162, 162, 224));
   border-radius: 5px;
   padding: 20px 70px 20px 20px;
   display: flex;
@@ -125,7 +126,7 @@ h1 {
   padding: 18px 16px;
   list-style: none;
   width: calc(100% / 5);
-  background: #242131;
+  background-image: linear-gradient(to left, #2d1b7f, #5949a2);
   border-radius: 5px;
 }
 .weather-cards .card h3 {
@@ -137,7 +138,9 @@ h1 {
   margin: 5px 0 -12px 0;
 }
 
-
+.city-btn {
+  margin-top: 10px;
+}
 
 @media (max-width: 1400px) {
   .weather-data .current-weather {
