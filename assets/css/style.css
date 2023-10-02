@@ -1,193 +1,174 @@
-
-
+/* Import Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
 body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-
+  background: #E3F2FD;
 }
-
-main {
-    position: fixed;
-    left: 0;
-    width: 320px;
-    height: 100%;
-    margin-top: 90px;
-    z-index: 1;
-    display: flex;
-    background-color: aliceblue;
-    border: 1px solid rgb(14, 99, 184)
-}
-
-.side {
-    width: 300px;
-}
-
-header {
-    position: fixed;
-    top:0;
-    height: 100px;
-    background-image: linear-gradient(to right,rgb(14, 99, 184), navy);
-    width: 100%;
-    left: 0;
-    text-align: center;
-    z-index: 2;
-}
-
 h1 {
-    color: white;
-    font-size: 38px;
+  background: #5372F0;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 18px 0;
+  color: #fff;
 }
-
-h2 {
-    font-size: 30px;
+.container {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
 }
-
-input {
+.weather-input {
+  width: 550px;
+}
+.weather-input input {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1.07rem;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.weather-input input:focus {
+  padding: 0 16px;
+  border: 2px solid #5372F0;
+}
+.weather-input .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #BBBBBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-input .separator::before{
+  content: "or";
+  color: #6C757D;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  margin-top: -4px;
+  background: #E3F2FD;
+}
+.weather-input button {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background: #5372F0;
+  transition: 0.2s ease;
+}
+.weather-input .search-btn:hover {
+  background: #2c52ed;
+}
+.weather-input .location-btn {
+  background: #6C757D;
+}
+.weather-input .location-btn:hover {
+  background: #5c636a;
+}
+.weather-data {
+  width: 100%;
+}
+.weather-data .current-weather {
+  color: #fff;
+  background: #5372F0;
+  border-radius: 5px;
+  padding: 20px 70px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.current-weather .icon {
+  text-align: center;
+}
+.current-weather .icon img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+.current-weather .icon h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.days-forecast h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+.days-forecast .weather-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.weather-cards .card {
+  color: #fff;
+  padding: 18px 16px;
+  list-style: none;
+  width: calc(100% / 5);
+  background: #6C757D;
+  border-radius: 5px;
+}
+.weather-cards .card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.weather-cards .card img {
+  max-width: 70px;
+  margin: 5px 0 -12px 0;
+}
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+  .weather-cards {
+    flex-wrap: wrap;
+  }
+  .weather-cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+}
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 15px);
+  }
+}
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .weather-input {
     width: 100%;
-    margin: 10px;
-    margin-top: 0;
-   block-size: 50px;
-   border-radius: 5px;
-   border: 2px solid rgb(193, 190, 190);
-}
-
-
-
-section {
-    margin-top: 120px;
-    margin-left: 330px;
-    width: 70%;
-
-}
-
-.cityInfo {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-.fiveDay {
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-}
-
-.fiveDay h2 {
-    width: 100%;
-}
-
-#day-1{
-    background-color: rgb(39, 39, 80);
-    min-width: 250px;
-    margin: 20px;
-    padding: 10px;
-    height: fit-content;
-    border-radius: 5px;
-}
-
-#day-2{
-    background-color: rgb(39, 39, 80);
-        min-width: 250px;
-    margin: 20px;
-    padding: 10px;
-    height: fit-content;
-    border-radius: 5px;
-
-}
-
-#day-3{
-    background-color: rgb(39, 39, 80);
-        min-width: 250px;
-    margin: 20px;
-    padding: 10px;
-    height: fit-content;
-    border-radius: 5px;
-
-}
-
-#day-4{
-    background-color: rgb(39, 39, 80);
-        min-width: 250px;
-    margin: 20px;
-    padding: 10px;
-    height: fit-content;
-    border-radius: 5px;
-
-}
-
-.day{
-    background-color: rgb(39, 39, 80);
-        min-width: 170px;
-    margin: 20px;
-    padding: 10px;
-    height: fit-content;
-    border-radius: 5px;
-
-}
-
-::placeholder {
-    font-size: 20px;
-    color: rgb(217, 213, 213);
-    margin-top: 8px;
-}
-
-h4 {
-    color: aliceblue;
-    font-weight: 600;
-    font-size: larger;
-}
-
-h5 {
-    color: aliceblue;
-    font-weight: 400;
-    font-size: large;
-}
-
-.btn {
-    width: 100%;
-    margin: 10px;
-    height: 30px;
-    font-size: medium;
-    border: none;
-    border-radius: 5px;
-}
-
-.city:hover {
-    box-shadow: inset 0 0 2px 2px rgb(37, 136, 241);
-}
-
-.search:hover {
-    box-shadow: 0 0 2px 2px rgb(20, 12, 67);
-
-}
-
-.city {
-    background-color: rgb(207, 205, 205);
-    font-weight: 600;
-
-}
-
-.search {
-    background-color: rgb(91, 149, 244);
-    color: aliceblue;
-    font-weight: 400;
-}
-
-
-
-.line {
-    background-color: rgb(207, 202, 202);
-    width: 100%;
-    height: 2px;
-margin: 10px;
-}
-
-.fa-sun {
-    font-size: xx-large;
-}
-
-.fa-cloud {
-    font-size: xx-large;
+  }
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
 }

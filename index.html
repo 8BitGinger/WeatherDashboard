@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Added Font Awesome for Weather Icons later-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <!--Added jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -15,81 +16,61 @@
 
 </head>
 <body>
-    <header class="header">
-        <h1>Weather Dashboard</h1>
-    </header>
-
-    <main>
-        <div class="side">
-            <h2>Search for a City:</h2>
-            <form>
-                <input id="searchBox" type="search" placeholder="San Diego" spellcheck="false">
-                <button id="searchBtn" class="btn search">Search</button>
-            </form>
-        <!--the div below is used to create the line effect-->
-            <div class="line"></div>
-            <button id="atlanta" class="btn city">Atlanta</button>
-            <button id="denver" class="btn city">Denver</button>
-            <button id="seattle" class="btn city">Seattle</button>
-            <button id="sanFrancisco" class="btn city">San Francisco</button>
-            <button id="orlando" class="btn city">Orlando</button>
-            <button id="newYork" class="btn city">New York</button>
-            <button id="chicago" class="btn city">Chicago</button>
-            <button id="austin" class="btn city">Austin</button>
+    <h1>Weather Dashboard</h1>
+    <div class="container">
+      <div class="weather-input">
+        <h3>Enter a City Name</h3>
+        <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
+        <button class="search-btn">Search</button>
+        <div class="separator"></div>
+        <button class="location-btn">Use Current Location</button>
+      </div>
+      <div class="weather-data">
+        <div class="current-weather">
+          <div class="details">
+            <h2>_______ ( ______ )</h2>
+            <h6>Temperature: __°C</h6>
+            <h6>Wind: __ M/S</h6>
+            <h6>Humidity: __%</h6>
+          </div>
         </div>
-    </main>
-
-    <section>
-        <div id="cityInfo" class="cityInfo">
-            <h2 class="cityName">Atlanta (9/13/2022) <i class="fa-solid fa-sun" style="color: #ffd500;"></i></h2>
-            <h3 id="cityTemp">Temp: 76.62 f</h3>
-            <h3 id="cityWind">Wind: 8.43 MPH</h3>
-            <h3 id="cityHum">Humidity: 44%</h3>
+        <div class="days-forecast fiveDay">
+          <h2>5-Day Forecast</h2>
+          <ul class="weather-cards">
+            <li class="card day">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card day">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card day">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card day">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card day">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+          </ul>
         </div>
-
-        <div id="fiveDay" class="fiveDay">
-            <h2>5-Day Forecast:</h2>
-            <div class="day">
-                <h4 id="dateDay-1">9/14/2022</h4>
-                <h5 id="iconDay-1"><i class="fa-solid fa-sun" style="color: #ffd500;"></i></h5>
-                <h5 id="tempDay-1">Temp:63.55 F</h5>
-                <h5 id="windDay-1">Wind 3.94 f</h5>
-                <h5 id="humDay-1">Humidity 63%</h5>
-            </div>
-            <div class="day">
-                <h4 id="dateDay-2">9/15/2022</h4>
-                <h5 id="iconDay-2"><i class="fa-solid fa-sun" style="color: #ffd500;"></i></h5>
-                <h5 id="tempDay-2">Temp:63.55 F</h5>
-                <h5 id="windDay-2">Wind 3.94 f</h5>
-                <h5 id="humDay-2">Humidity 63%</h5>
-            </div>
-            <div class="day">
-                <h4 id="dateDay-3">9/16/2022</h4>
-                <h5 id="iconDay-3"><i class="fa-solid fa-sun" style="color: #ffd500;"></i></h5>
-                <h5 id="tempDay-3">Temp:63.55 F</h5>
-                <h5 id="windDay-3">Wind 3.94 f</h5>
-                <h5 id="humDay-3">Humidity 63%</h5>
-            </div>
-            <div class="day">
-                <h4 id="dateDay-4">9/17/2022</h4>
-                <h5 id="iconDay-4"><i class="fa-solid fa-sun" style="color: #ffd500;"></i></h5>
-                <h5 id="tempDay-4">Temp:63.55 F</h5>
-                <h5 id="windDay-4">Wind 3.94 f</h5>
-                <h5 id="humDay-4">Humidity 63%</h5>
-            </div>
-            <div class="day">
-                <h4 id="dateDay-5">9/18/2022</h4>
-                <h5 id="iconDay-5"><i class="fa-solid fa-cloud" style="color: #ffffff;"></i></i></h5>
-                <h5 id="tempDay-5">Temp:63.55 F</h5>
-                <h5 id="windDay-5">Wind 3.94 f</h5>
-                <h5 id="humDay-5">Humidity 63%</h5>
-            </div>
-
-        </div>
-
-    </section>
+      </div>
+    </div>
     
-    <script src="/assets/js/script.js"></script>
-
-</body>
+  </body>
 </html>
