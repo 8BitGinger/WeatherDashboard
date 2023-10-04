@@ -14,8 +14,11 @@ function getWeather () {
         return res.json();
     })
     .then(data => {
-        console.log(Data);
+        console.log(data);
     })
     .catch(error => console.log(error));
 
 }
+
+//this is to use another weather API on different tutorial.  Decided not
+//to use this tutorial.  
