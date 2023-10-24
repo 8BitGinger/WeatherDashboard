@@ -7,7 +7,12 @@
   font-family: 'Open Sans', sans-serif;
 }
 body {
-  background: #E3F2FD;
+  background-color: transparent;
+  height: 100vh;
+}
+
+.backer {
+  background-image: linear-gradient(rgba(30, 143, 255, 0.725), white);
 }
 h1 {
     background-image: linear-gradient(to right,rgb(10, 74, 137), navy);  font-size: 1.75rem;
@@ -86,7 +91,7 @@ h1 {
 .weather-data .current-weather {
   color: #ffffff;
   border: 2px solid navy;
-  background-image: linear-gradient(to right,  #1d0a72, #178dcc);
+  background-image: linear-gradient(to right,  #1d0a72bf, #178dccc1);
   border-radius: 25px;
   padding: 20px 70px 20px 20px;
   display: flex;
@@ -126,7 +131,7 @@ h1 {
   padding: 18px 16px;
   list-style: none;
   width: calc(100% / 5);
-  background-image: linear-gradient(to left, #1d0a72, #178dcc);
+  background-image: linear-gradient(to left, #1d0a72c6, #178dcc9c);
   border-radius: 25px;
 }
 .weather-cards .card h3 {
@@ -167,6 +172,9 @@ h1 {
   }
 }
 @media (max-width: 750px) {
+  body{
+    height: fit-content;
+  }
   h1 {
     font-size: 1.45rem;
     padding: 16px 0;
