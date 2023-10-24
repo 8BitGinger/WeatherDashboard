@@ -110,7 +110,7 @@ const getButtonCoordinates = () => {
     });
 }
 
-cityBtnEl.addEventListener("click", getButtonCoordinates);
+
 locationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
